@@ -17,7 +17,8 @@
 #include "mbed.h"
 #include "common_functions.h"
 #include "UDPSocket.h"
-#include "OnboardCellularInterface.h"
+// #include "OnboardCellularInterface.h"
+#include "UbloxPPPCellularInterface.h"
 
 #define UDP 0
 #define TCP 1
@@ -41,7 +42,8 @@
 #define RETRY_COUNT 3
 
 // CellularInterface object
-OnboardCellularInterface iface;
+// OnboardCellularInterface iface;
+UbloxPPPCellularInterface iface;
 
 // Echo server hostname
 const char *host_name = "echo.u-blox.com";
@@ -157,7 +159,7 @@ nsapi_error_t test_send_recv()
 
 int main()
 {
-    iface.modem_debug_on(MBED_CONF_APP_MODEM_TRACE);
+    // iface.modem_debug_on(MBED_CONF_APP_MODEM_TRACE);
     /* Set Pin code for SIM card */
     iface.set_sim_pin(MBED_CONF_APP_SIM_PIN_CODE);
 

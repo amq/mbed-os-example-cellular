@@ -1,0 +1,18 @@
+.temp
+.build
+.settings
+projectfiles
+/Debug/
+/Develop/
+/Release/
+
+# mbed-cli
+.mbed
+.mbedignore
+*.py*
+/BUILD/
+.cproject
+.project
+mbed_config.h
+makefile.targets
+GettingStarted.html
